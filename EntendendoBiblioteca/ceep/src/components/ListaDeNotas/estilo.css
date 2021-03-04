@@ -1,0 +1,16 @@
+.listaDeNotas {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.listaDeNotas__item {
+  text-align: center;
+  padding: 1em;
+}
+
+.listaDeNotas__titulo {
+  margin-bottom: .5em;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
