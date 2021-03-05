@@ -21,13 +21,25 @@ class App extends Component {
     }
     this.setState(novoEstado)
   }
+
+  deletarNota(index) {
+    // Colocando o array de notas em uma variavel para facilidade de manipulação
+    let arrayNotas = this.state.notas;
+    // Deletando com o splice
+    arrayNotas.splice(index,1);
+    // Substituindo o array pelo array deletado
+    this.setState({notas:arrayNotas});
+  }
   
   render() {
     return (
       <section className="conteudo">
         {/* criarNota é uma propriedade customizada, passada para poder chamar um método da classe pai dentro da filha */}
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
-        <ListaDeNotas notas={this.state.notas}/>
+        <ListaDeNotas
+          apagarNota={this.deletarNota.bind(this)}
+          notas={this.state.notas}
+        />
       </section>
     );
   }
