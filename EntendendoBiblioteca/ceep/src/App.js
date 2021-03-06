@@ -3,40 +3,14 @@ import FormularioCadastro from "./components/FormularioCadastro/FormularioCadast
 import ListaDeCategorias from "./components/ListaDeCategorias/ListaDeCategorias";
 import { Component } from "react";
 import "./Assets/App.css";
+import Categorias from "./Dados/Categorias";
+import ArrayDeNotas from "./Dados/Notas";
 
 class App extends Component {
   constructor() {
     super();
-    // declarando o estado inicial
-    this.state = {
-      notas: [],
-      categorias: [],
-    };
-  }
-
-  criarNota(titulo, texto, categoria) {
-    const novaNota = { titulo, texto, categoria };
-    const novoArrayNotas = [...this.state.notas, novaNota];
-    const novoEstado = {
-      notas: novoArrayNotas,
-    };
-    this.setState(novoEstado);
-  }
-
-  deletarNota(index) {
-    // Colocando o array de notas em uma variavel para facilidade de manipulação
-    let arrayNotas = this.state.notas;
-    // Deletando com o splice
-    arrayNotas.splice(index, 1);
-    // Substituindo o array pelo array deletado
-    this.setState({ notas: arrayNotas });
-  }
-
-  adicionarCategoria(nomeCategoria) {
-    // O spread operator adiciona no array o que vem depois da virgula
-    const novoArrayCategorias = [...this.state.categorias, nomeCategoria];
-    const novoEstado = { ...this.state, categorias: novoArrayCategorias };
-    this.setState(novoEstado);
+    this.categorias = new Categorias();
+    this.notas = new ArrayDeNotas();
   }
 
   render() {
@@ -44,16 +18,16 @@ class App extends Component {
       <section className="conteudo">
         {/* criarNota é uma propriedade customizada, passada para poder chamar um método da classe pai dentro da filha */}
         <FormularioCadastro
-          categorias={this.state.categorias}
-          criarNota={this.criarNota.bind(this)}
+          categorias={this.categorias}
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
         />
         <ListaDeCategorias
-          adicionarCategoria={this.adicionarCategoria.bind(this)}
-          categorias={this.state.categorias}
+          adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
+          categorias={this.categorias}
         />
         <ListaDeNotas
-          apagarNota={this.deletarNota.bind(this)}
-          notas={this.state.notas}
+          apagarNota={this.notas.apagarNota.bind(this.notas)}
+          notas={this.notas}
         />
       </section>
     );
