@@ -25,5 +25,7 @@
 .listaDeCategorias__input {
   max-height: 2em;
   align-self: center;
-  margin: 0 5em;
+  border: black 2px solid;
+  border-radius: 10px;
+  padding: .5em;
 }

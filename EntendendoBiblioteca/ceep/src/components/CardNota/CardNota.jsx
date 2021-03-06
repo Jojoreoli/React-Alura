@@ -14,6 +14,7 @@ class CardNota extends Component {
     return (
       <section className="card-nota">
         <header className="card-nota__cabecalho">
+          <h4 className="card-nota__categoria">{this.props.categoria}</h4>
           <h3 className="card-nota__titulo">{this.props.titulo}</h3>
           <Deleteicon onClick={this.apagar.bind(this)}/>
         </header>

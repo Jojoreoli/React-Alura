@@ -14,8 +14,8 @@ class App extends Component {
     };
   }
 
-  criarNota(titulo, texto) {
-    const novaNota = { titulo, texto };
+  criarNota(titulo, texto, categoria) {
+    const novaNota = { titulo, texto, categoria };
     const novoArrayNotas = [...this.state.notas, novaNota];
     const novoEstado = {
       notas: novoArrayNotas,
@@ -43,7 +43,10 @@ class App extends Component {
     return (
       <section className="conteudo">
         {/* criarNota é uma propriedade customizada, passada para poder chamar um método da classe pai dentro da filha */}
-        <FormularioCadastro criarNota={this.criarNota.bind(this)} />
+        <FormularioCadastro
+          categorias={this.state.categorias}
+          criarNota={this.criarNota.bind(this)}
+        />
         <ListaDeCategorias
           adicionarCategoria={this.adicionarCategoria.bind(this)}
           categorias={this.state.categorias}
