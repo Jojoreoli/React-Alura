@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html {
+  background-image: url("https://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');

@@ -5,6 +5,7 @@ import { Component } from "react";
 import "./Assets/App.css";
 import Categorias from "./Dados/Categorias";
 import ArrayDeNotas from "./Dados/Notas";
+import "./Assets/index.css";
 
 class App extends Component {
   constructor() {

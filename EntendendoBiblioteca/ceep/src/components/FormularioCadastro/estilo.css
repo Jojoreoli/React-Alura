@@ -1,9 +1,11 @@
+
 .formulario {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
   margin: 0 40% 0 40%;
+  font-family: 'Lato', sans-serif;
 }
 
 .formulario__input {
@@ -23,14 +25,13 @@
 .formulario__button {
   margin-bottom: 1em;
   border-radius: 10px;
-  border:gainsboro solid 1px;
-  background-color: gainsboro;
-  padding: 1em;
+  border:black solid 1px;
+  background-color: #FFFF99;
+  padding: .5em;
+  font-size: 1.1em;
 }
 
 .formulario__button:active {
-  background-color: blue;
-  color: white;
-  border-color: blue;
-  border-radius: 10px;
+  background-color: #cfc;
+  border-radius: 12px;
 }

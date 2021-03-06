@@ -3,6 +3,7 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .listaDeCategorias__ul {
@@ -12,13 +13,12 @@
 }
 
 .listaDeCategorias__li {
-  background-color: slategray;
-  border: slategray solid 1px;
+  background-color: #ccf;
+  border: black solid 1px;
   border-radius: 10px;
-  padding: .3em;
+  padding: .4em;
   font-weight: 700;
   font-size: 1.1em;
-  color: white;
   margin: 1em;
 }
 

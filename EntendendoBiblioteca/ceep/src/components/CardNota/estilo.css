@@ -7,6 +7,9 @@
   border-radius: 10px;
   padding: 1rem;
   max-width: 25rem;
+  background-color: #FFFF99;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 5px 5px 7px rgb(33,33,33,.7);
 }
 
 .card-nota__cabecalho {
@@ -24,11 +27,12 @@
 }
 
 .card-nota__categoria {
-  font-weight: 400;
+  font-weight: 700;
   font-size: .7em;
-  color: white;
-  background-color:slategray;
+  color: black;
+  background-color:#cfc;
   border-radius: 10px;
   padding: .3em;
+  margin-bottom: .2em;
 }
 
